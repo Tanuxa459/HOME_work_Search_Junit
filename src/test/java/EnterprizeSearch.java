@@ -13,12 +13,10 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class EnterprizeSearch {
     @BeforeAll
-    static void beforeAll() {
-
-
+    static void setup() {
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = false;
-    }
+           }
+    
         @Test
         void enterprizeTest(){
 
@@ -27,8 +25,6 @@ public class EnterprizeSearch {
 
             $(byTagAndText("a","Enterprises")).click();
             $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform"));
-
-
 
 
 
